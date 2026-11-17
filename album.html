@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Álbum - Pokédex Online</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/explorar.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+<div id="pagina">
+  <header class="topo">
+    <nav class="abas" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#pokedex">Pokédex</a>
+      <a href="album.html">Álbum</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="meutime.html">Meu Time</a>
+      <a href="loja.html">Loja</a>
+      <a href="amigos.html">Amigos</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+    <div class="faixa-logo">
+      <h1 class="logo">ÁLBUM <span>DE POKÉMON</span></h1>
+    </div>
+  </header>
+
+  <div id="aviso" class="aviso" role="status" hidden></div>
+
+  <div class="colunas menu-centro">
+    <aside class="menu" aria-label="Escolher região">
+      <h3>Navegar por região</h3>
+      <ul id="lista-regioes"></ul>
+    </aside>
+    <main class="centro">
+      <section class="caixa">
+        <h3 id="titulo-regiao">Álbum</h3>
+        <p id="resumo" class="pequeno"></p>
+        <div id="grade-album" class="grade"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<dialog id="dlg-detalhe">
+  <div class="detalhe">
+    <img id="det-imagem" src="" alt="" width="140" height="140">
+    <div>
+      <h2 id="det-nome"></h2>
+      <p id="det-genero" class="pequeno"></p>
+      <p id="det-status" class="pequeno"></p>
+    </div>
+  </div>
+  <p id="det-descricao"></p>
+  <p id="det-idioma" class="pequeno"></p>
+  <button type="button" class="botao" id="fechar-detalhe">Fechar</button>
+</dialog>
+
+<script src="js/dados-pokemon.js"></script>
+<script src="js/raridades.js"></script>
+<script src="js/jogador.js"></script>
+<script src="js/perfil.js"></script>
+<script src="js/album.js"></script>
+</body>
+</html>

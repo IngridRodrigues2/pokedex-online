@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex Online</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+<div id="pagina">
+
+  <!-- Topo: abas de navegação e logo -->
+  <header class="topo">
+    <nav class="abas" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#pokedex">Pokédex</a>
+      <a href="album.html">Álbum</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="meutime.html">Meu Time</a>
+      <a href="loja.html">Loja</a>
+      <a href="amigos.html">Amigos</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+    <div class="faixa-logo">
+      <h1 class="logo">POKÉDEX <span>ONLINE</span></h1>
+      <form id="form-busca" class="busca">
+        <label for="campo-busca">Buscar Pokémon</label>
+        <input id="campo-busca" type="text" placeholder="nome ou número" required>
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Aviso de carregando / erro / sucesso -->
+  <div id="aviso" class="aviso" role="status" hidden></div>
+
+  <div class="colunas">
+
+    <!-- Menu lateral: filtro por tipo (montado pelo JS) -->
+    <aside class="menu" aria-label="Filtrar por tipo">
+      <h3>Navegar por tipo</h3>
+      <ul id="lista-tipos"></ul>
+    </aside>
+
+    <!-- Conteúdo central -->
+    <main class="centro" id="inicio">
+      <section class="caixa destaque">
+        <h3 id="destaque-titulo">Pokémon em destaque</h3>
+        <div id="destaque-corpo" class="destaque-corpo">Carregando...</div>
+      </section>
+
+      <section class="caixa" id="time">
+        <h3>Últimos capturados</h3>
+        <div id="capturados" class="capturados">
+          <p class="vazio">Nenhum Pokémon capturado ainda. Clique em Explorar!</p>
+        </div>
+      </section>
+
+      <section class="caixa" id="pokedex">
+        <h3 id="titulo-grade">Pokédex</h3>
+        <div id="grade" class="grade"></div>
+        <button id="mais" class="botao" type="button" hidden>Carregar mais</button>
+      </section>
+    </main>
+
+    <!-- Coluna da direita -->
+    <aside class="direita" id="explorar">
+      <section class="banner">
+        <h3>Explorar</h3>
+        <p>Procure Pokémon selvagens pelo mapa e tente capturar.</p>
+        <button id="btn-explorar" class="botao grande" type="button">Explorar agora</button>
+      </section>
+      <section class="caixa" id="sobre">
+        <h3>Sobre</h3>
+        <p class="pequeno">Dados da PokéAPI. Capturas serão salvas em banco de dados online.</p>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="rodape">
+    <p>Visitantes: 000123</p>
+    <p>Melhor visualizado em 1024x768</p>
+  </footer>
+</div>
+<script src="js/jogador.js"></script>
+<script src="js/perfil.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

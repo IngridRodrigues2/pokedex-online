@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar - Pokédex Online</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+<div id="pagina">
+  <header class="topo">
+    <div class="faixa-logo">
+      <h1 class="logo">POKÉDEX <span>ONLINE</span></h1>
+    </div>
+  </header>
+
+  <main class="login-caixa">
+    <section class="caixa">
+      <h3>Acesso do jogador</h3>
+      <div class="abas-login">
+        <button id="aba-entrar" class="botao ativo" type="button">Entrar</button>
+        <button id="aba-cadastrar" class="botao" type="button">Criar conta</button>
+      </div>
+      <div id="aviso" class="aviso" role="status" hidden></div>
+      <form id="form-login">
+        <label for="campo-nome">Nome de usuário</label>
+        <input id="campo-nome" type="text" autocomplete="username" maxlength="20" required>
+        <label for="campo-senha">Senha</label>
+        <input id="campo-senha" type="password" autocomplete="current-password" maxlength="64" required>
+        <div id="linha-confirmar" hidden>
+          <label for="campo-confirmar">Confirmar senha</label>
+          <input id="campo-confirmar" type="password" autocomplete="new-password" maxlength="64">
+        </div>
+        <p id="dica" class="pequeno"></p>
+        <button id="btn-enviar" class="botao grande" type="submit">Entrar</button>
+      </form>
+      <p id="aviso-modo" class="pequeno"></p>
+    </section>
+  </main>
+</div>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Estilos extras da página Explorar (usa as cores do estilo.css) */
+.colunas.duas { grid-template-columns: 1fr 220px; }
+.arena { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 8px 0; min-height: 120px; }
+.arena img { background: radial-gradient(#5a1a05, #000); border: 1px solid var(--borda); }
+.controles { margin: 8px; }
+.controles .botao { margin-top: 6px; }
+#btn-procurar { width: calc(100% - 16px); margin: 8px; }
+
+/* Barra de proximidade: quanto mais cheia, mais perto o Pokémon está */
+.barra { height: 22px; background: #2a0a05; border: 1px solid var(--borda); }
+#barra-nivel { height: 100%; width: 0; background: linear-gradient(#ffd24a, #e8561f); }
+.puxar { font-size: 20px; padding: 14px; touch-action: manipulation; user-select: none; }
+.bloqueado { padding: 8px; border: 1px solid #ff4d4d; background: #3a0a0a; color: #ffb3b3; font-weight: bold; }
+
+.lista-capturados { list-style: none; margin: 0; padding: 0 8px 8px; }
+.lista-capturados li { display: flex; align-items: center; gap: 6px; padding: 2px 0; border-bottom: 1px solid #3a1a0a; }
+.lista-capturados img { width: 40px; height: 40px; }
+
+@media (max-width: 800px) {
+  .colunas.duas { grid-template-columns: 1fr; }
+  .direita { order: 0; }
+}
+
+/* Botões de ação nos cartões e janela de doação */
+.botao.pequeno { padding: 2px 8px; font-size: 11px; }
+.botao:disabled { opacity: 0.45; cursor: not-allowed; }
+.carta .acoes { justify-content: center; margin-top: 4px; }
+dialog { background: #000; color: var(--texto); border: 1px solid var(--borda); padding: 12px; }
+dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+dialog select { margin: 6px 0; padding: 3px; }
+
+/* Meu Time: cartões maiores e botões dentro da caixa */
+#lista-time { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+#lista-time .carta { padding: 8px; min-width: 0; }
+#lista-time .carta img { width: 96px; height: 96px; }
+#lista-time .acoes { flex-wrap: wrap; }
+#lista-time .botao.pequeno { flex: 1 1 60px; padding: 3px 6px; }
+
+/* Álbum */
+.colunas.menu-centro { grid-template-columns: 170px 1fr; }
+#grade-album { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); }
+.slot { min-width: 0; padding: 6px 4px; text-align: center; font: inherit; color: var(--texto); background: #1a0a05; border: 1px solid #5a1a05; cursor: pointer; }
+.slot:hover { border-color: #ffb347; }
+.slot img { width: 96px; height: 96px; max-width: 100%; }
+.slot span { display: block; }
+.slot .num { color: #aaa; font-size: 10px; }
+.slot.capturado { border-color: #ffd24a; }
+.slot.escuro { background: #7a5a46; color: #2a120a; }
+.slot.escuro .num { color: #2a120a; }
+.slot.escuro img { filter: brightness(0); opacity: 0.8; }
+.selo { color: #ffd24a; font-size: 10px; font-weight: bold; }
+.detalhe { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; max-width: 520px; }
+.detalhe p { margin: 4px 0; }
+@media (max-width: 800px) { .colunas.menu-centro { grid-template-columns: 1fr; } }
+
+/* Etiquetas de raridade */
+.rar { font-weight: bold; font-size: 11px; }
+.r-comum { color: #bbbbbb; }
+.r-incomum { color: #5fd35f; }
+.r-raro { color: #4da6ff; }
+.r-epico { color: #c77dff; }
+.r-lendario { color: #ffd24a; }

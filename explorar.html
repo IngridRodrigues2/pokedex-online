@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorar - Pokédex Online</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/explorar.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+<div id="pagina">
+
+  <header class="topo">
+    <nav class="abas" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#pokedex">Pokédex</a>
+      <a href="album.html">Álbum</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="meutime.html">Meu Time</a>
+      <a href="loja.html">Loja</a>
+      <a href="amigos.html">Amigos</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+    <div class="faixa-logo">
+      <h1 class="logo">EXPLORAR <span>PELO MAPA</span></h1>
+    </div>
+  </header>
+
+  <div id="aviso" class="aviso" role="status" hidden></div>
+
+  <div class="colunas duas">
+
+    <!-- Arena de captura -->
+    <main class="centro">
+      <section class="caixa">
+        <h3>Arena de captura</h3>
+        <div id="arena-corpo" class="arena">
+          <p class="vazio">Clique em "Procurar Pokémon" para começar. Pokémon mais fortes que você não podem ser capturados.</p>
+        </div>
+        <div id="controles" class="controles"></div>
+        <button id="btn-procurar" class="botao grande" type="button">Procurar Pokémon</button>
+      </section>
+    </main>
+
+    <!-- Perfil e últimos capturados -->
+    <aside class="direita">
+      <section class="caixa">
+        <h3>Seu perfil</h3>
+        <p>Pontos: <strong id="pontos">0</strong></p>
+        <p>Capturados: <strong id="total">0</strong></p>
+        <p>Aura: <strong id="aura">Sem aura</strong></p>
+        <p>Inventário: <strong id="inventario">0</strong></p>
+        <p>Moedas: <strong id="moedas">0</strong></p>
+      </section>
+      <section class="caixa">
+        <h3>Últimos capturados</h3>
+        <ul id="lista-capturados" class="lista-capturados"></ul>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="rodape">
+    <p>Dica: no computador, aperte a barra de espaço para puxar.</p>
+  </footer>
+</div>
+<script src="js/dados-pokemon.js"></script>
+<script src="js/raridades.js"></script>
+<script src="js/jogador.js"></script>
+<script src="js/perfil.js"></script>
+<script src="js/explorar.js"></script>
+</body>
+</html>

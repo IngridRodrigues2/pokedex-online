@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amigos - Pokédex Online</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/explorar.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+<div id="pagina">
+  <header class="topo">
+    <nav class="abas" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#pokedex">Pokédex</a>
+      <a href="album.html">Álbum</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="meutime.html">Meu Time</a>
+      <a href="loja.html">Loja</a>
+      <a href="amigos.html">Amigos</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+    <div class="faixa-logo">
+      <h1 class="logo">AMIGOS <span>E GRUPOS</span></h1>
+    </div>
+  </header>
+
+  <!-- Esqueleto: as ações serão ligadas quando o banco online estiver pronto -->
+  <div class="colunas duas">
+    <main class="centro">
+      <section class="caixa">
+        <h3>Adicionar amigo</h3>
+        <p class="vazio">Disponível quando o banco de dados online estiver conectado.</p>
+        <input type="text" placeholder="apelido do amigo" aria-label="Apelido do amigo" disabled>
+        <button class="botao" type="button" disabled>Adicionar</button>
+      </section>
+      <section class="caixa">
+        <h3>Trocar Pokémon</h3>
+        <p class="vazio">Escolha um Pokémon seu e envie uma proposta de troca para um amigo.</p>
+      </section>
+    </main>
+    <aside class="direita">
+      <section class="caixa">
+        <h3>Meus amigos</h3>
+        <p class="vazio">Nenhum amigo ainda.</p>
+      </section>
+      <section class="caixa">
+        <h3>Grupos</h3>
+        <p class="vazio">Nenhum grupo ainda.</p>
+        <button class="botao" type="button" disabled>Criar grupo</button>
+      </section>
+    </aside>
+  </div>
+</div>
+<script src="js/jogador.js"></script>
+<script src="js/perfil.js"></script>
+</body>
+</html>
