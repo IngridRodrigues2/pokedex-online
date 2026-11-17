@@ -2,7 +2,7 @@
 
 Site feito com HTML, CSS e JavaScript puro, que usa a [PokéAPI](https://pokeapi.co/) para buscar Pokémon, explorar o mapa e capturar.
 
-🔗 **Acesse:** https://SEU-USUARIO.github.io/NOME-DO-PROJETO/
+🔗 **Acesse:**  https://ingridrodrigues2.github.io/pokedex-online/
 
 ## Funcionalidades
 
@@ -48,4 +48,4 @@ HTML5, CSS3, JavaScript, PokéAPI, Firebase (Authentication e Firestore) e GitHu
 
 ## Autor
 
-SEU NOME
+Ingrid Rodrigues
